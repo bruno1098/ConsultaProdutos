@@ -13,8 +13,8 @@ public class Cliente {
 
             Scanner scanner = new Scanner(System.in);
             System.out.println("***********************************************************************");
-            System.out.println("[Bem vindo a consulta *TRANQUILA* de produtos!]");
-            System.out.print("\nPara receber as informações sobre o produto digite o seu ID (De 1 a 5):");
+            System.out.println("[Bem vindo(a) a consulta de produtos!]");
+            System.out.print("\nPara receber as informações sobre o produto digite o seu ID (De 1 a 7):");
             int idDoProduto = scanner.nextInt();
             System.out.println("***********************************************************************");
             outputStream.writeInt(idDoProduto);

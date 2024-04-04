@@ -12,32 +12,24 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="TDS_TB_PRODUTOCS")
-//name: nome igual ao generator, sequenceName: nome no Banco, allocationSize: incremento
 @SequenceGenerator(name="produto", sequenceName = "", allocationSize = 1)
 public class Produto implements Serializable{
 
     @Id
     @Column(name="ID")
     private int id;
-
     @Column(name="NOME", nullable = false, length = 155)
     private String nome;
-
     @Column(name="PRECO")
     private int valor;
-
     @Temporal(TemporalType.DATE)
     @Column(name="VALIDADE")
     private Date validade;
-
     @Column(name="TAMANHO")
     private int tamanho;
-
     @Column(name="DESCRICAO", length = 155)
     private String descricao;
-
     public Produto() {}
-
     public Produto(Integer id, String nome, int valor, Date validade, int tamanho, String descricao) {
         this.id = id;
         this.nome = nome;
@@ -47,7 +39,7 @@ public class Produto implements Serializable{
         this.descricao = descricao;
     }
 
-    @PostPersist //Executa o metodo apos o persist
+    @PostPersist
     private void executar() {
     System.out.println("Fique tranquilo que está executando...!");
     }

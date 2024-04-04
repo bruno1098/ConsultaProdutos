@@ -26,7 +26,9 @@ public class Servidor {
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(1521);
-            System.out.print("SERVIDOR RODANDO TRANQUIIIILO");
+            System.out.println("******************");
+            System.out.print("SERVIDOR RODANDO");
+            System.out.println("\n******************");
             while (true) {
                 Socket socket = serverSocket.accept();
                 ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
